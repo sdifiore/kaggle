@@ -5,7 +5,7 @@ FROM continuumio/miniconda3
 WORKDIR /app
 
 # Copy the environment.yml file to the Docker image and rename it if needed
-COPY environment.yml /app/kaggle.yml
+COPY kaggle.yml /app/kaggle.yml
 
 # Create the Conda environment from the environment.yml file
 RUN conda env create -f /app/kaggle.yml
