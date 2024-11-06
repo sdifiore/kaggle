@@ -8,7 +8,7 @@ WORKDIR /app
 COPY kaggle.yml /app/
 
 # Create the Conda environment from the environment.yml file
-RUN conda env create -f environment.yml
+RUN conda env create -f kaggle.yml
 
 # Activate the environment and make it the default
 RUN echo "conda activate kaggle" >> ~/.bashrc
